@@ -1,7 +1,7 @@
 /*----------------------------------------------------------
  * Práctica 3: Utilizando promesas y XML
  * Fecha: 05-Mar-2020
- * Autora: A01651395 Jorge Akio Olvera Arao
+ * Autor: A01651395 Jorge Akio Olvera Arao
  *----------------------------------------------------------*/
 
 const fs = require('fs');
@@ -24,11 +24,11 @@ async function getJsonFromXmlFile(path) {
 
 /**
  * Formats a 'movie' object into a string with its name, followed by
- * the year of release and it's director if it exsists. For example:
+ * the year of release and it's director if it's registered. For example:
  * 'Example movie (1990), director: John Smith'
  * or 'Example movie (1990)' if the director isn't registered
- * @param {Object} movie Object that represents a movie
- * @return {string} The formatted string for a movie
+ * @param {Object} movie Object that contains the movie data
+ * @return {string} The formatted string to represent a movie
  */
 function formatMovie(movie) {
   let name = movie['$']['name'];
@@ -43,7 +43,7 @@ function formatMovie(movie) {
 
 /**
  * Reads movies from an XML file and prints them through standard output
- * in following format: Example movie (1990), director: John Smith.
+ * in the following format: Example movie (1990), director: John Smith.
  * Every movie will be printed in a new line and if the movie doesn't
  * have a director registered, that part of the string won't be shown.
  * @return {Promise<undefined>}

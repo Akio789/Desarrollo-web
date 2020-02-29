@@ -1,7 +1,7 @@
 /*----------------------------------------------------------
  * Práctica 3: Utilizando promesas y XML
  * Fecha: 05-Mar-2020
- * Autora: A01651395 Jorge Akio Olvera Arao
+ * Autor: A01651395 Jorge Akio Olvera Arao
  *----------------------------------------------------------*/
 
 const fs = require('fs');
@@ -27,8 +27,8 @@ async function getJsonFromXmlFile(path) {
  * followed by it's cast with each actor in a new line and indented
  * with two whitespaces. If the movie has no cast registered, the 
  * string will only be the name of the movie.
- * The string will always have a blank new line at the end.
- * @param {Object} movie Object that represents a movie
+ * The string will have a blank new line at the end.
+ * @param {Object} movie Object that contains the movie data
  * @return {string} The formatted string for the movie's cast
  */
 function formatMovieCast(movie) {
@@ -45,12 +45,12 @@ function formatMovieCast(movie) {
 }
 
 /**
- * Reads movies from an XML file and prints the movie name and it's
- * cast through standard output.
- * The movie cast is represented it's actors names, each in a new line and 
+ * Reads movies from an XML file and prints the movie name and it's cast 
+ * through standard output.
+ * The movie cast is represented by it's actors names, each in a new line and 
  * indented with two whitespaces. If the movie has no cast registered, only the 
  * movie name is shown.
- * Each movie cast is separated by a new line.
+ * Every movie name/cast set has a blank new line at the end.
  * @return {Promise<undefined>}
  */
 async function printCastWithFormat() {
