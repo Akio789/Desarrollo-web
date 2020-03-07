@@ -75,14 +75,14 @@ const runLookAndSay = number => {
 };
 
 /**
- * GET lookAndSay page.
+ * GET conway page.
  * Takes the given number in the route, generates the
  * corresponding Conway's look and say sequences and 
  * redirects to lookAndSay.ejs, where the sequences are 
  * shown to the user through an ordered list.
  */
-router.get('/lookAndSay/:number', (req, res) => {
+router.get('/conway/:number', (req, res) => {
   const number = parseInt(req.params.number);
   const sequences = runLookAndSay(number);
-  res.render('lookAndSay', { number, sequences });
+  res.render('conway', { number, sequences });
 });
