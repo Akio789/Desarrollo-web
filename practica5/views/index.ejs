@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Superheroes</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <table class="w3-table w3-red">
+    <tr>
+      <th>Nombre superhéroe</th>
+      <th>Identidad secreta</th>
+      <th>Sexo</th>
+    </tr>
+    <% for (let row of rows) { %>
+    <tr>
+      <td>
+        <%= row['Nombre superhéroe']  %>
+      </td>
+      <td>
+        <%= row['Identidad secreta']  %>
+      </td>
+      <td>
+        <%= row['Sexo']  %>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+</body>
+
+</html>
